@@ -4,12 +4,19 @@
 }
 
 .container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'top top top'
+    'med med med'
+    'bot bot bot'
+    'bot2 bot2 bot2'
+    'footer footer footer';
 }
 
 .tittle{
 display: flex;
+grid-area: header;
 background-color: #216fb1;
 height: 40px;
 color: white;
@@ -25,6 +32,7 @@ color: white;
 
 .top-container{
     display: flex;
+    grid-area: top;
     flex-direction: column;
     background-color: #2c99a3;
     height: 250px;
@@ -65,6 +73,10 @@ color: white;
 
 .p3{
     max-width: 570px;
+}
+
+.med-container{
+    grid-area: med;
 }
 
 .med-container-top{
@@ -190,6 +202,7 @@ button{
     background-color: #2c99a3;
     height: 135px;
     margin-bottom: 85px;
+    grid-area: bot;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,6 +217,7 @@ button{
     background-color:#216fb1;
     height: 175px;
     display: flex;
+    grid-area: bot2;
     justify-content:space-around;
     color: white;
     font-weight: bold;
@@ -240,11 +254,43 @@ button{
 .develop-name{
     color: white;
     height: 35px;
+    grid-area: footer;
     background-color:#808080;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
+@media (min-width: 576px) { 
+    .container{        
+        grid-template-areas: 
+        'header'
+        'top'
+        'med'
+        'bot'
+        'bot2'
+        'footer';
+    }
+ }
+
+
+@media (min-width: 768px) {  
+    .container{        
+        grid-template-areas: 
+        'header header'
+        'top top'
+        'med med'
+        'bot bot'
+        'bot2 bot2'
+        'footer footer';
+    }
+}
+
+
+
+
+
 
 
 
