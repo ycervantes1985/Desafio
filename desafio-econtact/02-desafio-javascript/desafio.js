@@ -51,16 +51,15 @@ const objetoFijo = {
  */
 
 function largoDelNombre(nombre = "") {
-  console.log(typeof nombre)
+  
     if(typeof nombre == "string"){
       if(nombre.length >= 0 && nombre.length < 5 )
-      {
-        console.log(nombre.length)
-      return "Es un nombre corto. Su largo es de: "+nombre.length      
+      {        
+      return `Es un nombre corto. Su largo es de: ${nombre.length}`      
       }      
       else{
         if(nombre.length >= 11)
-        return "Es un nombre largo. Su largo es de: "+nombre.length
+        return `Es un nombre largo. Su largo es de: ${nombre.length}`
       }
     }    
 
